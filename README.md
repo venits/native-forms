@@ -1,6 +1,7 @@
-﻿# NativeForms.com
+﻿# [NativeForms.com](https://nativeforms.com?utm_source=github)
 
 Build **forms, surveys and polls** for React Native apps.
+
 Product comes up with [dashboard](link_to_screenshot), form editor, templates and email notifications :)
 
 
@@ -16,16 +17,16 @@ yarn add native-forms
 />
 ```
 <blockquote>
-  This code will display fullscreen form in your application.
+  This code will display form in your application.
 </blockquote>
 
 ## 3. Full Example
 
-Basic flow of **NativeForms** in application.
+Basic flow of **NativeForms** in your application.
 
 ```js
 import React, {useState} from 'react';  
-import {Button, StyleSheet, Text, View} from 'react-native';  
+import { Button, StyleSheet, Text, View } from 'react-native';  
 import NativeForms from 'native-forms';  
   
 const App = () => {  
@@ -35,17 +36,17 @@ const App = () => {
   
   return (  
     <View style={styles.container}>  
-	  <Text>NativeForms.com</Text>  
+      <Text>NativeForms.com</Text>  
 	  
-	  <Button title="Show Form" onPress={show} color="#20f" />  
+      <Button title="Show Form" onPress={show} color="#20f" />  
 	  
-	  {hasForm && (  
-	    <NativeForms  
-	      form="https://my.nativeforms.com/sWO3UzYt0mcvZWPmZyZkRkZxUXTy0Db"  
-	      onClose={hide}  
-	     />
-	   )}
-	 </View>  
+      {hasForm && (  
+        <NativeForms  
+          form="https://my.nativeforms.com/sWO3UzYt0mcvZWPmZyZkRkZxUXTy0Db"  
+          onClose={hide}  
+        />
+      )}
+    </View>  
   );
 };  
   
@@ -80,6 +81,10 @@ export default App;
 />
 ```
 	
+## 6. Screenshots
+
+Pictures taken from admin panel at: [NativeForms.com](https://nativeforms.com?utm_source=github)
+
 
 ## Support
 

@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Button, StyleSheet, Text, View} from 'react-native';
+import { Button, StyleSheet, Text, View } from 'react-native';
 import NativeForms from 'native-forms';
 
 const App = () => {
