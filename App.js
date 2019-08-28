@@ -11,7 +11,7 @@ const App = () => {
     <View style={styles.container}>
       <Text>NativeForms.com</Text>
 
-      <Button title="Show Form" onPress={show} />
+      <Button title="Show Form" onPress={show} color="#20f" />
 
       {hasForm && (
         <NativeForms
