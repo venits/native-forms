@@ -1,6 +1,6 @@
 # [NativeForms.com](https://nativeforms.com)
 
-Build **forms, surveys and polls** for React Native apps.
+## Build **forms, surveys and polls** for React Native apps.
 
 ### Why this product was created?
 We created NativeForms to save you countless hours of boring development of forms. Our product offers advanced solutions to all your problems and let you focus on things that are really important in your app.
@@ -44,17 +44,17 @@ const App = () => {
   
   return (  
     <View style={styles.container}>  
-	  <Text>NativeForms.com</Text>  
+      <Text>NativeForms.com</Text>  
 	  
-	  <Button title="Show Form" onPress={show} color="#20f" />  
+      <Button title="Show Form" onPress={show} color="#20f" />  
 	  
-	  {hasForm && (  
-	    <NativeForms  
-	      form="https://my.nativeforms.com/vVDct0mcvZWPmZic4JlRvpmNy0Db"  
-	      onClose={hide}  
-	     />
-	   )}
-	 </View>  
+      {hasForm && (  
+    	<NativeForms  
+      	  form="https://my.nativeforms.com/vVDct0mcvZWPmZic4JlRvpmNy0Db"  
+      	  onClose={hide}  
+     	/>
+      )}
+    </View>  
   );
 };  
   
@@ -82,6 +82,8 @@ You can create your own forms [here](https://app.nativeforms.com).
 | **onSend**   | Function | No | Called when **completed** form was sent.                                   |
 | **email**   | String | No | Email of person that will complete form (it will be displayed in admin panel).                                   |
 | **name**   | String | No | Name of person that will complete form.                                   |
+
+
 Example of using props:
 ```js
 <NativeForms  
@@ -92,7 +94,12 @@ Example of using props:
   email="customer@gmail.com"
 />
 ```
-	
+
+## 6. Live Preview
+1. [Codesandbox](https://codesandbox.io/embed/native-forms-web-p5k7u)
+2. [Expo](https://expo.io/@venits/native-forms)
+3. [Codepen](https://codepen.io/venits/pen/QWLOmMV)
+
 ## Support
 
 In case of any questions  or problems, please contact me at:
