@@ -82,6 +82,7 @@ You can create your own forms [here](https://app.nativeforms.com).
 | **onSend**   | Function | No | Called when **completed** form was sent.                                   |
 | **email**   | String | No | Email of person that will complete form (it will be displayed in admin panel).                                   |
 | **name**   | String | No | Name of person that will complete form.                                   |
+| **extraData**   | Object | No | Extra data fields that will be send along with completed form. This data will not be visible by user.                                  |
 
 
 Example of using props:
@@ -92,6 +93,9 @@ Example of using props:
   onClose={() => console.log("User cancels forms")}
   name="John Smith"
   email="customer@gmail.com"
+  extraData={{
+    "Account Type": "Premium"
+  }}
 />
 ```
 
