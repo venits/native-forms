@@ -1,12 +1,10 @@
+
 # [NativeForms.com](https://nativeforms.com)
 
 ## Build **forms, surveys and polls** for React Native apps.
 
 ### Why this product was created?
 We created NativeForms to save you countless hours of boring development of forms. Our product offers advanced solutions to all your problems and let you focus on things that are really important in your app.
-
-### How does it work?
-After creating account, you get access to admin panel where you manage all your forms. Each form has unique address, that you can use both on mobile and web. Each time form is completed, you receive email notification. All completed forms will be visible in admin panel. You can export collected data to file format of your choice.
 
 ## 1. Installation
 ```js
@@ -26,7 +24,7 @@ import NativeForms from 'native-forms';
 />
 ```
 
-  This code will display form in your application. You can create your own forms [here](https://app.nativeforms.com).
+  This code will display form in your application. Replace **form prop** with your form's address. You can create your own forms [here](https://app.nativeforms.com).
 
 ## 3. Full Example
 
@@ -69,7 +67,8 @@ const styles = StyleSheet.create({
   
 export default App;
 ```
-You can create your own forms [here](https://app.nativeforms.com).
+Replace **form prop** with your form's address. You can create your own forms [here](https://app.nativeforms.com).
+
 ## 4. Demo
 ![Demo](https://raw.githubusercontent.com/venits/native-forms/master/assets/demo.gif)
 
@@ -79,7 +78,8 @@ You can create your own forms [here](https://app.nativeforms.com).
 |--------------------|--------|---------|----------------------------------------------------------------|
 | **form**        | String   | **Yes**    | URL of **form** to display.       |
 | **onClose**       | Function | No | Called when user decides to close the form.                                         |
-| **onSend**   | Function | No | Called when **completed** form was sent.                                   |
+| **onSend**   | Function | No | Called when user **completes** form.                                  |
+| **onBeforeSend**   | Function | No | Called before sending form. Can be used to provide extra data based on user's input.               |
 | **email**   | String | No | Email of person that will complete form (it will be displayed in admin panel).                                   |
 | **name**   | String | No | Name of person that will complete form.                                   |
 | **extraData**   | Object | No | Extra data fields that will be send along with completed form. This data will not be visible by user.                                  |
@@ -88,9 +88,15 @@ You can create your own forms [here](https://app.nativeforms.com).
 Example of using props:
 ```js
 <NativeForms  
-  form="https://my.nativeforms.com/vVDct0mcvZWPmZic4JlRvpmNy0Db"  
-  onSend={() => console.log("Form completed")}  
+  form="https://my.nativeforms.com/vVDct0mcvZWPmZic4JlRvpmNy0Db"
+  onSend={formData => console.log("Completed form data", formData)}  
   onClose={() => console.log("User cancels forms")}
+  onBeforeSend={formData => {   
+    //extra data that will be added to form
+    return {  
+      "Account Type": "Free" 
+    };  
+  }}
   name="John Smith"
   email="customer@gmail.com"
   extraData={{
@@ -108,3 +114,7 @@ Example of using props:
 
 In case of any questions  or problems, please contact me at:
 [hello@nativeforms.com](mailto:tomasz.przybyl.it@gmail.com)
+
+
+### Happy Coding 💖
+### [NativeForms.com](https://nativeforms.com)
