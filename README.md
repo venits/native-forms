@@ -117,7 +117,7 @@ Example of using props:
 
 ## File Upload for React Native
 
-Uploading files for React Native is a little bit tricky. You need additional library in your project.
+Uploading files for React Native is a little bit tricky.
 
 If you are using [Expo](https://expo.io/) you have to add this component: [https://docs.expo.io/versions/latest/sdk/webview/](https://docs.expo.io/versions/latest/sdk/webview/)
 
@@ -139,7 +139,7 @@ npm install --save react-native-webview
 react-native link react-native-webview
 ```
 
-### Full code example | Form with file upload.
+### Full code example.
 
 ```js
 import React, { useState } from "react";  
