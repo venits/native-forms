@@ -9,7 +9,7 @@ We created NativeForms to save you countless hours of boring development of form
 
 - [Installation](#installation)
 - [Basic Usage](#basic-usage)
-- [Full Examples](#full-example)
+- [Full Example](#full-example)
 - [Demo](#demo)
 - [NativeForms Props](#nativeforms-props)
 - [File Upload for React Native](#file-upload-for-react-native)
@@ -139,7 +139,7 @@ npm install --save react-native-webview
 react-native link react-native-webview
 ```
 
-### Full code example.
+### Full code example
 
 ```js
 import React, { useState } from "react";  
