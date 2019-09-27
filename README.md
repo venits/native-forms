@@ -1,4 +1,5 @@
 
+
 # [NativeForms.com](https://nativeforms.com)
 
 ## Build **forms, surveys and polls** for React Native apps.
@@ -6,13 +7,22 @@
 ### Why this product was created?
 We created NativeForms to save you countless hours of boring development of forms. Our product offers advanced solutions to all your problems and let you focus on things that are really important in your app.
 
-## 1. Installation
+- [Installation](#installation)
+- [Basic Usage](#basic-usage)
+- [Full Examples](#full-example)
+- [Demo](#demo)
+- [NativeForms Props](#nativeforms-props)
+- [File Upload for React Native](#file-upload-for-react-native)
+- [Live Preview](#live-preview)
+- [Support](#support)
+
+## Installation
 ```js
-yarn add native-forms
-// or
 npm install native-forms --save
+// or
+yarn add native-forms
 ```
-## 2. Basic Usage
+## Basic Usage
 1. Import component.
 ```js
 import NativeForms from 'native-forms';
@@ -26,7 +36,7 @@ import NativeForms from 'native-forms';
 
   This code will display form in your application. Replace **form prop** with your form's address. You can create your own forms [here](https://app.nativeforms.com).
 
-## 3. Full Example
+## Full Example
 
 Basic flow of **NativeForms** in your application.
 
@@ -69,10 +79,10 @@ export default App;
 ```
 Replace **form prop** with your form's address. You can create your own forms [here](https://app.nativeforms.com).
 
-## 4. Demo
+## Demo
 ![Demo](https://raw.githubusercontent.com/venits/native-forms/master/assets/demo.gif)
 
-## 5. Props
+## NativeForms Props
 
 | Name               | Type   | Required | Note                                                           |
 |--------------------|--------|---------|----------------------------------------------------------------|
@@ -105,7 +115,80 @@ Example of using props:
 />
 ```
 
-## 6. Live Preview
+## File Upload for React Native
+
+Uploading files for React Native is a little bit tricky. You need additional library in your project.
+
+If you are using [Expo](https://expo.io/) you have to add this component: [https://docs.expo.io/versions/latest/sdk/webview/](https://docs.expo.io/versions/latest/sdk/webview/)
+
+**Adding it is as simple as running this command:**
+```js
+expo install react-native-webview
+```
+
+------
+
+If you created your project with [React Native Cli](https://github.com/react-native-community/cli) you need to install this library:
+
+[https://github.com/react-native-community/react-native-webview](https://github.com/react-native-community/react-native-webview)
+
+**It is as simple as running those 2 commands:**
+```js
+npm install --save react-native-webview
+// and
+react-native link react-native-webview
+```
+
+### Full code example | Form with file upload.
+
+```js
+import React, { useState } from "react";  
+import { Button, StyleSheet, Text, View } from "react-native";  
+import { NativeFormsWebView } from "native-forms";  
+import { WebView } from "react-native-webview";  
+  
+const App = () => {  
+  const [hasForm, showForm] = useState(false);  
+  const show = () => showForm(true);  
+  const hide = () => showForm(false);  
+  
+  return (  
+    <View style={styles.container}>  
+      <Text>NativeForms.com</Text>  
+  
+      <Button title="Show Form" onPress={show} color="#20f" />  
+  
+      {hasForm && (  
+        <NativeFormsWebView onClose={hide}>  
+          <WebView  
+            source={{  
+              uri: "https://my.nativeforms.com/AdnJHOt0mcvZWPmZic4JlRvpmNy0Db"  
+            }}  
+          />
+        </NativeFormsWebView>  
+      )}
+    </View>  
+  );
+};  
+  
+const styles = StyleSheet.create({  
+  container: {  
+    flex: 1,  
+    backgroundColor: "#fff",  
+    alignItems: "center",  
+    justifyContent: "center"  
+  }  
+});  
+  
+export default App;
+```
+
+**That's all :)**
+
+
+## Live Preview
+Full code examples are available  here:
+
 1. [Codesandbox](https://codesandbox.io/embed/native-forms-web-p5k7u)
 2. [Expo](https://expo.io/@venits/native-forms)
 3. [Codepen](https://codepen.io/venits/pen/QWLOmMV)
@@ -113,7 +196,7 @@ Example of using props:
 ## Support
 
 In case of any questions  or problems, please contact me at:
-[hello@nativeforms.com](mailto:tomasz.przybyl.it@gmail.com)
+[hello@nativeforms.com](mailto:hello@nativeforms.com)
 
 
 ### Happy Coding 💖
