@@ -88,11 +88,11 @@ Replace **form prop** with your form's address. You can create your own forms [h
 | Name               | Type   | Required | Note                                                           |
 |--------------------|--------|---------|----------------------------------------------------------------|
 | **form**        | String   | **Yes**    | URL of **form** to display.       |
-| **formJSON**        | Object   | No    | You can use JSON format of form instead of *form URL*. You can get this format by clicking "Export Form to JSON" in dashboard. Can be used for offline forms.   |
+| **formJSON**        | Object   | No    | You can use JSON format of form instead of *form URL*. You can get this format by clicking "Export Form to JSON" in dashboard. Can be used for [offline forms](#offline-forms).   |
 | **onClose**       | Function | No | Called when user decides to close the form.                                         |
 | **onSend**   | Function | No | Called when user **completes** form.                                  |
 | **onBeforeSend**   | Function | No | Called before sending form. Can be used to provide extra data based on user's input.               |
-| **noInternetConnection**   | Function | No | Called when user tries to send a form but is offline. Can be used for offline forms.              |
+| **noInternetConnection**   | Function | No | Called when user tries to send a form but is offline. Can be used for [offline forms](#offline-forms).              |
 | **email**   | String | No | Email of person that will complete form (it will be displayed in the admin panel).                                   |
 | **name**   | String | No | Name of person that will complete form.                                   |
 | **extraData**   | Object | No | Extra data fields that will be sent along with the completed form. This data will not be visible by users.                                  |
@@ -194,7 +194,7 @@ It can happen that user is offline while completing the form.
 NativeForms gives option to send form later when user is back online.
 The best way to understand how to use forms offline is by looking at the snippet below.
 
-### Offline Form - code example
+### Offline Forms - code example
 ```js
 import React, { useState } from "react";  
 import { Button, StyleSheet, Text, View } from "react-native";  
