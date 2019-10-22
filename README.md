@@ -33,11 +33,13 @@ import NativeForms from 'native-forms';
 2. Use this component in your **render()** method.
 ```js
 <NativeForms  
-  form="https://my.nativeforms.com/vVDct0mcvZWPmZic4JlRvpmNy0Db"  
+  form="https://my.nativeforms.com/vVDct0mcvZWPmZic4JlRvpmNy0Db"
+  // or you can provide JSON format of form. Check props table for more info.
+  // formJSON={ label: "My Forms", ... }
 />
 ```
 
-  This code will display form in your application. Replace **form prop** with your form's address. You can create your own forms [here](https://app.nativeforms.com).
+Form is displayed **natively** and **is not a webview**. Replace **form prop** with your form's address. You can create your own forms [here](https://app.nativeforms.com).
 
 ## Full Example
 
