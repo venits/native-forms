@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "expo": "^34.0.1",
-    "native-forms": "^1.1.16",
+    "native-forms": "^1.1.37",
     "react": "16.8.3",
     "react-dom": "^16.8.6",
     "react-native": "https://github.com/expo/react-native/archive/sdk-34.0.0.tar.gz",
