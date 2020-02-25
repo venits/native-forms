@@ -33,7 +33,7 @@ import NativeForms from 'native-forms';
 2. Use this component in your **render()** method.
 ```js
 <NativeForms  
-  form="https://my.nativeforms.com/vVDct0mcvZWPmZic4JlRvpmNy0Db"
+  form="https://my.nativeforms.com/I2Z5xWPmZic4JlRvpmNy0Db"
   // or you can provide JSON format of form. Check props table for more info.
   // formJSON={ label: "Schedule a call", ... }
 />
