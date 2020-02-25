@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { Button, StyleSheet, Text, View } from 'react-native';
-import NativeForms from 'native-forms';
+import React, { useState } from "react";
+import { Button, StyleSheet, Text, View } from "react-native";
+import NativeForms from "native-forms";
 
 const App = () => {
   const [hasForm, showForm] = useState(false);
@@ -15,7 +15,7 @@ const App = () => {
 
       {hasForm && (
         <NativeForms
-          form="https://my.nativeforms.com/QOphzZxg3Nt0mcvZWPmZic4JlRvpmNy0Db"
+          form="https://my.nativeforms.com/I2Z5xWPmZic4JlRvpmNy0Db"
           onClose={hide}
         />
       )}
@@ -26,10 +26,10 @@ const App = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center"
+  }
 });
 
 export default App;
