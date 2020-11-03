@@ -1,8 +1,8 @@
-# [NativeForms](https://nativeforms.com)
+## [NativeForms](https://nativeforms.com)
 
 ### Build **forms, surveys & polls** for React Native apps.
 
-#### Why this product was created?
+### Why this product was created?
 
 We created NativeForms to save you countless hours of boring development of forms. Create forms without coding and control them from the [dashboard](https://app.nativeforms.com). Bring all the logic outside your app, so you can control forms even when your app is live.
 
@@ -95,4 +95,4 @@ Replace **form prop** with your form's address. You can create your own forms [h
 In case of any questions or problems, please contact me at:
 [hello@nativeforms.com](mailto:hello@nativeforms.com)
 
-#### Happy Coding 💖
+### Happy Coding 💖
