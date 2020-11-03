@@ -3,7 +3,6 @@
     "name": "NativeForms",
     "slug": "native-forms",
     "privacy": "public",
-    "sdkVersion": "34.0.0",
     "description": "Build forms, surveys and polls for React Native apps.",
     "githubUrl": "https://github.com/venits/native-forms",
     "platforms": [

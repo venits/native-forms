@@ -1,25 +1,50 @@
 import React, { useState } from "react";
-import { Button, StyleSheet, Text, View } from "react-native";
-import NativeForms from "native-forms";
+import { StyleSheet, View } from "react-native";
+import { BottomNavigation, Button } from "react-native-paper/lib/module";
+import NativeForms, { NativeFormsModal } from "native-forms";
 
 const App = () => {
-  const [hasForm, showForm] = useState(false);
-  const show = () => showForm(true);
-  const hide = () => showForm(false);
+  const [index, setIndex] = useState(0);
+  const [routes] = useState([
+    {
+      key: "normal",
+      title: "Fullscreen",
+      icon: "fullscreen",
+    },
+    {
+      key: "modal",
+      title: "Modal",
+      icon: "eye",
+    },
+  ]);
 
   return (
-    <View style={styles.container}>
-      <Text>NativeForms.com</Text>
-
-      <Button title="Show Form" onPress={show} color="#20f" />
-
-      {hasForm && (
-        <NativeForms
-          form="https://my.nativeforms.com/I2Z5xWPmZic4JlRvpmNy0Db"
-          onClose={hide}
-        />
-      )}
-    </View>
+    <BottomNavigation
+      navigationState={{ index, routes }}
+      onIndexChange={setIndex}
+      renderScene={BottomNavigation.SceneMap({
+        normal: () => (
+          <NativeForms form="https://my.nativeforms.com/I2Z5xWPmZic4JlRvpmNy0Db" />
+        ),
+        modal: () => {
+          const [hasForm, showForm] = useState(false);
+          return (
+            <View style={styles.container}>
+              <Button onPress={() => showForm(true)} color="#20f">
+                Show Form
+              </Button>
+              <NativeFormsModal
+                visible={hasForm}
+                form="https://my.nativeforms.com/I2Z5xWPmZic4JlRvpmNy0Db"
+                onClose={() => showForm(false)}
+              />
+            </View>
+          );
+        },
+      })}
+      barStyle={{ backgroundColor: "#2200ff" }}
+      style={{ paddingTop: 32 }}
+    />
   );
 };
 
@@ -28,8 +53,8 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#fff",
     alignItems: "center",
-    justifyContent: "center"
-  }
+    justifyContent: "center",
+  },
 });
 
 export default App;
