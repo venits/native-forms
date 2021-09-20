@@ -24,7 +24,7 @@ const App = () => {
       onIndexChange={setIndex}
       renderScene={BottomNavigation.SceneMap({
         normal: () => (
-          <NativeForms form="https://my.nativeforms.com/I2Z5xWPmZic4JlRvpmNy0Db" />
+          <NativeForms form="https://form.nativeforms.com/I2Z5xWPmZic4JlRvpmNy0Db" />
         ),
         modal: () => {
           const [hasForm, showForm] = useState(false);
@@ -35,7 +35,7 @@ const App = () => {
               </Button>
               <NativeFormsModal
                 visible={hasForm}
-                form="https://my.nativeforms.com/I2Z5xWPmZic4JlRvpmNy0Db"
+                form="https://form.nativeforms.com/I2Z5xWPmZic4JlRvpmNy0Db"
                 onClose={() => showForm(false)}
               />
             </View>

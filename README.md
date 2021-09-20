@@ -32,7 +32,7 @@ import NativeForms from "native-forms";
 2. Render form on the screen.
 
 ```js
-<NativeForms form="https://my.nativeforms.com/I2Z5xWPmZic4JlRvpmNy0Db" />
+<NativeForms form="https://form.nativeforms.com/I2Z5xWPmZic4JlRvpmNy0Db" />
 ```
 
 Form is displayed **natively** and **is not a webview**. You can create your own forms [here](https://app.nativeforms.com).
@@ -53,7 +53,7 @@ const App = () => {
       <Button title="Show Form" onPress={() => showForm(true)} color="#20f" />
       <NativeFormsModal
         visible={hasForm}
-        form="https://my.nativeforms.com/I2Z5xWPmZic4JlRvpmNy0Db"
+        form="https://form.nativeforms.com/I2Z5xWPmZic4JlRvpmNy0Db"
         onClose={() => showForm(false)}
       />
     </View>
@@ -81,11 +81,11 @@ Replace **form prop** with your form's address. You can create your own forms [h
 ### Props
 
 | Name          | Type     | Required | Note                                                                                                                                 |
-| ------------- | -------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| ------------- | -------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------ | --- |
 | **form**      | String   | **Yes**  | URL of **form** to display.                                                                                                          |
 | **formJSON**  | Object   | No       | You can use JSON format of the form instead of _form URL_. You can get this format by clicking **Export Form to JSON** in dashboard. |
 | **onClose**   | Function | No       | Called when user decides to close the form.                                                                                          |
-| **onSend**    | Function | No       | Called when user **completes** form.                                                                                                 |  |
+| **onSend**    | Function | No       | Called when user **completes** form.                                                                                                 |     |
 | **email**     | String   | No       | Email of person that will complete form (it will be displayed in the admin panel).                                                   |
 | **name**      | String   | No       | Name of person that will complete form.                                                                                              |
 | **extraData** | Object   | No       | Extra data fields that will be sent along with the completed form. This data will not be visible by users.                           |
