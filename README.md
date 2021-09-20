@@ -80,8 +80,8 @@ Replace **form prop** with your form's address. You can create your own forms [h
 
 ### Props
 
-| Name          | Type     | Required | Note                                                                                                                                 |
-| ------------- | -------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------ | --- |
+| Name          | Type     | Required | Note  |
+| ------------- | -------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | **form**      | String   | **Yes**  | URL of **form** to display.                                                                                                          |
 | **formJSON**  | Object   | No       | You can use JSON format of the form instead of _form URL_. You can get this format by clicking **Export Form to JSON** in dashboard. |
 | **onClose**   | Function | No       | Called when user decides to close the form.                                                                                          |
